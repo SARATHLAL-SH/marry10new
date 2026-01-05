@@ -74,13 +74,13 @@ export default function HomeClient() {
         
         <div className="max-w-4xl mx-auto relative z-10">
           <h1 className="text-5xl font-bold text-secondary mb-6 font-serif">
-            Find Your Perfect Match
+            Where Hearts Find Their Rhythm
           </h1>
           <p className="text-xl text-yellow-700 mb-8 font-sans">
-            Join thousands of successful marriages through our trusted platform
+            A New Era of Matchmaking Is on the Horizon.
           </p>
           <div className="font-script text-3xl text-yellow-700 mb-8">
-            Where Love Stories Begin...
+            Coming Soon Here....
           </div>
           <button
             onClick={() => setShowRegistration(true)}
