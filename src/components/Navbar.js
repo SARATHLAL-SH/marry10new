@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('/');
+  const [isHoveringLogo, setIsHoveringLogo] = useState(false);
   const pathname = usePathname();
 
   // Update active tab based on current route
@@ -61,30 +62,127 @@ export default function Navbar() {
   const activeTabIndex = navigationItems.findIndex(item => isActive(item.href));
 
   return (
-    <nav className="bg-gradient-to-r from-primary/10 to-primary shadow-2xl border-b-4 border-yellow-600 sticky top-0 z-50 backdrop-blur-sm ">
+    <nav className="bg-gradient-to-r from-white to-primary shadow-2xl border-b-4 border-yellow-600 sticky top-0 z-50 backdrop-blur-sm ">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-3">
-          {/* Logo/Brand */}
-          <div className="flex items-center space-x-3 group cursor-pointer">
-            <div className="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden border-2 border-yellow-500 shadow-lg group-hover:scale-110 transition-transform duration-300">
-              <img 
-                src="/images/mr10.jpeg" 
-                alt="Matrimony Logo" 
-                className="w-full h-full object-cover"
-              />
+          {/* Enhanced Logo/Brand */}
+          <div 
+            className="flex items-center space-x-3 group cursor-pointer"
+            onMouseEnter={() => setIsHoveringLogo(true)}
+            onMouseLeave={() => setIsHoveringLogo(false)}
+          >
+            {/* Enhanced Logo Container with multiple glow layers */}
+            <div className="relative">
+              {/* Outer glow rings */}
+              <div className={`absolute -inset-4 bg-gradient-to-r from-yellow-400/30 via-pink-500/20 to-yellow-400/30 rounded-full blur-xl transition-all duration-1000 ${
+                isHoveringLogo ? 'opacity-100 scale-110' : 'opacity-50 scale-100'
+              }`}></div>
+              
+              {/* Middle glow ring */}
+              <div className={`absolute -inset-2 bg-gradient-to-r from-yellow-300/40 via-pink-400/20 to-yellow-300/40 rounded-full blur-lg transition-all duration-700 ${
+                isHoveringLogo ? 'opacity-80 scale-105 animate-pulse' : 'opacity-40'
+              }`}></div>
+              
+              {/* Inner glow ring */}
+              <div className={`absolute -inset-1 bg-gradient-to-r from-yellow-200/60 via-pink-300/30 to-yellow-200/60 rounded-full blur-md transition-all duration-500 ${
+                isHoveringLogo ? 'opacity-100 animate-spin-slow' : 'opacity-30'
+              }`}></div>
+              
+              {/* Rotating particles around logo */}
+              {isHoveringLogo && (
+                <>
+                  {[...Array(8)].map((_, i) => (
+                    <div 
+                      key={i}
+                      className="absolute w-1 h-1 bg-yellow-300 rounded-full"
+                      style={{
+                        transform: `rotate(${i * 45}deg) translateX(50px)`,
+                        animation: `orbit 2s linear infinite`,
+                        animationDelay: `${i * 0.25}s`,
+                      }}
+                    ></div>
+                  ))}
+                </>
+              )}
+
+              {/* Logo image with enhanced effects */}
+              <div className="relative w-18 h-18 rounded-full flex items-center justify-center overflow-hidden border-3 border-yellow-500 shadow-2xl group-hover:scale-110 transition-all duration-500 z-10 backdrop-blur-sm bg-white/10">
+                {/* Shine effect overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 transition-opacity duration-700 ${
+                  isHoveringLogo ? 'opacity-100 animate-shine' : ''
+                }`}></div>
+                
+                {/* Pulsing ring */}
+                <div className={`absolute -inset-1 border-2 border-yellow-400/50 rounded-full transition-all duration-700 ${
+                  isHoveringLogo ? 'animate-ping opacity-20' : 'opacity-0'
+                }`}></div>
+                
+                <img 
+                  src="/images/m10_logo.jpeg" 
+                  alt="Matrimony Logo" 
+                  className="w-full h-full object-cover relative z-10"
+                />
+                
+                {/* Glowing overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-pink-500/10 to-yellow-400/20 rounded-full transition-all duration-500 ${
+                  isHoveringLogo ? 'opacity-100' : 'opacity-0'
+                }`}></div>
+              </div>
+              
+              {/* Floating particles */}
+              {isHoveringLogo && (
+                <>
+                  {[...Array(4)].map((_, i) => (
+                    <div 
+                      key={`particle-${i}`}
+                      className="absolute w-2 h-2 bg-gradient-to-r from-yellow-300 to-pink-300 rounded-full opacity-70"
+                      style={{
+                        left: `${Math.random() * 60 + 20}%`,
+                        top: `${Math.random() * 60 + 20}%`,
+                        animation: `float 3s ease-in-out infinite`,
+                        animationDelay: `${i * 0.5}s`,
+                      }}
+                    ></div>
+                  ))}
+                </>
+              )}
             </div>
-            <div className="text-4xl font-bold text-yellow-400 drop-shadow-lg relative">
-  {/* Glow animation above text */}
-  <div className="absolute top-6 left-0 right-0 h-1 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-    <div className="w-full h-full bg-yellow-400 rounded-full animate-pulse shadow-lg shadow-yellow-400/50"></div>
-  </div>
-  
-  {/* Glow effect that moves */}
-  <div className="absolute -top-3 left-0 w-4 h-2 bg-yellow-300 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-glow-sweep"></div>
-  
-  Marry@10
-  
-</div>
+            
+            {/* Enhanced Text with glow effects */}
+            <div className="text-4xl font-bold text-secondary drop-shadow-lg relative">
+              {/* Main text with gradient */}
+              <span className="relative z-20 bg-gradient-to-r from-yellow-600 via-pink-500 to-yellow-600 bg-clip-text text-transparent animate-gradient-x">
+                Marry@10
+              </span>
+              
+              {/* Glowing text shadow */}
+              <div className={`absolute inset-0 bg-gradient-to-r from-yellow-400 via-pink-400 to-yellow-400 blur-xl opacity-0 transition-opacity duration-500 ${
+                isHoveringLogo ? 'opacity-70' : 'opacity-30'
+              }`}></div>
+              
+              {/* Animated underline */}
+              <div className={`absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-yellow-400 rounded-full transition-all duration-500 ${
+                isHoveringLogo ? 'w-full opacity-100' : 'w-0 opacity-0'
+              }`}></div>
+              
+              {/* Sparkling dots */}
+              {isHoveringLogo && (
+                <>
+                  {[...Array(3)].map((_, i) => (
+                    <div 
+                      key={`sparkle-${i}`}
+                      className="absolute w-1 h-1 bg-yellow-300 rounded-full"
+                      style={{
+                        top: '-5px',
+                        left: `${20 + i * 30}%`,
+                        animation: `sparkle 1.5s ease-in-out infinite`,
+                        animationDelay: `${i * 0.3}s`,
+                      }}
+                    ></div>
+                  ))}
+                </>
+              )}
+            </div>
           </div>
           
           {/* Desktop Navigation Links */}
@@ -148,15 +246,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-
-      {/* Active tab indicator for desktop */}
-      {/* <div className="hidden md:block absolute bottom-0 left-0 h-1 bg-yellow-400 transition-all duration-500 ease-out rounded-full"
-           style={{
-             width: `${100 / navigationItems.length}%`,
-             transform: `translateX(${activeTabIndex * 100}%)`
-           }}>
-        <div className="w-full h-full bg-yellow-400 rounded-full shadow-lg shadow-yellow-400/50 animate-pulse"></div>
-      </div> */}
     </nav>
   );
 }
