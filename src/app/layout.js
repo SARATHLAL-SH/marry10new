@@ -18,9 +18,19 @@ const sacramento = Sacramento({
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Matrimony Website - Find Your Perfect Match',
-  description: 'A modern matrimony platform to find your life partner',
+  metadataBase: new URL("http://localhost:3000"),
+
+  title: {
+    default: "Trusted Matrimonial Sites in India | Marry10",
+    template: "%s | Marry10",
+  },
+  description:
+    "Marry10 is a trusted matrimonial site in India helping you find genuine and verified life partner matches.",
+  keywords: "matrimony, marriage, matchmaking, life partner, brides, grooms, wedding, find partner, matrimonial service",
+  robots: "index, follow",
 };
+
+
 
 export default function RootLayout({ children }) {
   return (
