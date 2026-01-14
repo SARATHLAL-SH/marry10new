@@ -80,7 +80,7 @@ export default function HomeClient() {
             A New Era of Matchmaking Is on the Horizon.
           </p>
           <div className="font-script text-3xl text-yellow-700 mb-8">
-            Coming Soon Here....
+            Join The Inner Circle.
           </div>
           <button
             onClick={() => setShowRegistration(true)}
