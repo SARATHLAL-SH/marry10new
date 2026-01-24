@@ -56,7 +56,7 @@ function Footer() {
             <h3 className="text-2xl font-bold text-primary mb-4">Matrimony</h3>
             <p className="text-gray-300">
               Find your perfect life partner with our modern matrimony platform. 
-              Trusted by thousands of families for genuine matches.
+            
             </p>
           </div>
           
@@ -76,8 +76,8 @@ function Footer() {
             <h4 className="text-lg font-semibold text-secondary mb-4">Contact Us</h4>
             <ul className="space-y-2 text-gray-300">
               <li>Email: info@matrimony.com</li>
-              <li>Phone: +1 (555) 123-4567</li>
-              <li>Address: 123 Match Street, City</li>
+              <li>Phone: +91 8891332500</li>
+              <li>Address:  Darbhanga, Bihar</li>
             </ul>
           </div>
         </div>

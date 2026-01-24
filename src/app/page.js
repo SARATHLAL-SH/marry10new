@@ -40,16 +40,17 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="px-4 py-8">
+    <main className=" flex-col items-center ">
       {/* Hero Section */}
-      <h1 className="text-3xl font-bold mb-4">Find Your Perfect Life Partner</h1>
+      {/* <h1 className="text-3xl text-center font-bold mb-4">Find Your Perfect Life Partner</h1>
 
       <Image
-        src="/images/marry10-01.png"
+        src="/images/heroImg.jpg"
         alt="Happy bride and groom looking for life partner"
         width={600}
         height={400}
         className="rounded-lg mb-6"
+        priority
       />
 
       <h2 className="text-xl font-semibold mb-2">Browse Verified Profiles</h2>
@@ -62,10 +63,10 @@ export default function Home() {
         className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
       >
         Learn More About Us
-      </a>
+      </a> */}
 
       {/* HomeClient Component */}
-      <div className="mt-10">
+      <div className="mt-0">
         <HomeClient />
       </div>
     </main>

@@ -17,7 +17,7 @@ export default function Navbar() {
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
-    { href: '/admin', label: 'Admin', isSpecial: true }
+    // { href: '/admin', label: 'Admin', isSpecial: true }
   ];
 
   const isActive = (href) => activeTab === href;
@@ -120,7 +120,7 @@ export default function Navbar() {
                 <img 
                   src="/images/m10_logo.jpeg" 
                   alt="Matrimony Logo" 
-                  className="w-full h-full object-cover relative z-10"
+                  className="w-12 h-12 object-cover relative z-10"
                 />
                 
                 {/* Glowing overlay */}

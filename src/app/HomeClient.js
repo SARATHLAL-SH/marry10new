@@ -34,6 +34,7 @@ export default function HomeClient() {
     }
   };
 
+  console.log("profiles===>", profiles)
   const fetchNotes = async () => {
     try {
       const notesQuery = query(collection(db, 'notes'), orderBy('order'));
@@ -62,7 +63,7 @@ export default function HomeClient() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 to-purple-100">
           {/* Floating Specialties */}
-      <SpecialtiesFloating />
+      {/* <SpecialtiesFloating /> */}
       {/* <SpecialtiesMobile /> */}
       {/* Hero Section */}
       <section 
@@ -80,7 +81,7 @@ export default function HomeClient() {
             A New Era of Matchmaking Is on the Horizon.
           </p>
           <div className="font-script text-3xl text-yellow-700 mb-8">
-            Join The Inner Circle.
+           Join today, unlock premium benefits tomorrow for Free
           </div>
           <button
             onClick={() => setShowRegistration(true)}
@@ -152,30 +153,46 @@ export default function HomeClient() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-pink-800 mb-4 font-serif">
-                Featured Profiles
+                Early Joiners  
               </h2>
               <div className="w-24 h-1 bg-pink-500 mx-auto mb-6"></div>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto font-sans">
-                Meet some of our registered members looking for their perfect match
+                Meet Our First Free Premium Members, Register Now – Become Our Next Free Premium Member
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {profiles.slice(0, 6).map((profile) => (
-                <div key={profile.id} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-white font-bold text-lg">
-                        {profile.name?.charAt(0) || 'U'}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-800 font-serif">{profile.name}</h3>
-                    <p className="text-gray-600 text-sm mt-1 font-sans">{profile.profession}</p>
-                    <p className="text-primary text-sm mt-2 font-sans">{profile.age} years • {profile.religion}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+  {profiles.slice(0, 6).map((profile) => (
+    <div 
+      key={profile.id} 
+      className="relative rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+    >
+      {/* Background image with blur */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${profile.gender === 'female' ? '/images/girl.jpg' : '/images/boy.jpg'})`
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      </div>
+      
+      {/* Content */}
+      <div className="relative z-10 text-center">
+        <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-md border-2 border-white/30">
+          <span className="text-white font-bold text-lg">
+            {profile.name?.charAt(0) || 'U'}
+          </span>
+        </div>
+        <h3 className="text-lg font-semibold text-white font-serif">{profile.name}</h3>
+        <p className="text-gray-200 text-sm mt-1 font-sans">{profile.profession}</p>
+        <p className="text-white text-sm mt-2 font-sans bg-white/20 inline-block px-3 py-1 rounded-full">
+          {profile.age} years • {profile.religion}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
 
             {profiles.length > 6 && (
               <div className="text-center mt-8">
@@ -217,9 +234,10 @@ export default function HomeClient() {
           <h2 className="text-4xl font-bold text-white mb-6 font-serif">
             Ready to Find Your Perfect Match?
           </h2>
-          <p className="text-xl text-secondary mb-8 font-sans">
-            Join our community today and start your journey to finding true love
+          <p className="text-xl text-secondary mb-4 font-sans">
+           Add your profile now and unlock exclusive launch benefits - enjoy premium features or a free month when our app goes live!
           </p>
+          
           <button
             onClick={() => setShowRegistration(true)}
             className="bg-secondary text-primary px-8 py-4 rounded-lg text-xl font-semibold hover:bg-secondary/90 transition duration-300 font-sans shadow-lg border-2 border-primary/30"
@@ -227,7 +245,7 @@ export default function HomeClient() {
             Register Free Today
           </button>
           <p className="text-secondary/80 mt-4 font-sans">
-            No hidden fees • Verified profiles • 100% secure
+            No hidden fees • 100% Verified profiles •  100% secure
           </p>
         </div>
       </section>

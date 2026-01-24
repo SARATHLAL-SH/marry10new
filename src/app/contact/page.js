@@ -49,8 +49,8 @@ export default function Contact() {
               
               <div className="space-y-2">
                 <p className="font-semibold">Email: info@matrimony.com</p>
-                <p className="font-semibold">Phone: +1 (555) 123-4567</p>
-                <p className="font-semibold">Address: 123 Matchmaking Street, City, Country</p>
+                <p className="font-semibold">Phone: +91 8891332500</p>
+                <p className="font-semibold">Address: Bihar, India</p>
               </div>
             </div>
           </div>
