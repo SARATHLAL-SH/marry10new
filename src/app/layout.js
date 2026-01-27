@@ -68,6 +68,7 @@ function Footer() {
               <li><a href="/about" className="text-gray-300 hover:text-primary transition-colors">About</a></li>
               <li><a href="/contact" className="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
               <li><a href="/admin" className="text-gray-300 hover:text-primary transition-colors">Admin</a></li>
+              <li><a href="/privacy-policy" className="text-gray-300 hover:text-primary transition-colors">Privacy & Policy</a></li>
             </ul>
           </div>
           
