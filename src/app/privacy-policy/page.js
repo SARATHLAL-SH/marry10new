@@ -1,7 +1,7 @@
 // app/privacy-policy/page.tsx
 import React from 'react';
 import Link from 'next/link';
-import { Shield, Lock, Eye, UserX, Mail, Phone, Calendar } from 'lucide-react';
+import { Shield, Lock, Eye, UserX, Mail, Phone, Calendar, FileCheck, Fingerprint } from 'lucide-react';
 
 const PrivacyPolicy = () => {
   return (
@@ -18,7 +18,7 @@ const PrivacyPolicy = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-600">
             <div className="flex items-center">
               <Calendar className="w-4 h-4 mr-2" />
-              <span className="text-sm sm:text-base">Last Updated: 15-02-2025</span>
+              <span className="text-sm sm:text-base">Last Updated: 15-03-2026</span>
             </div>
             <span className="hidden sm:block">•</span>
             <span className="text-sm sm:text-base">Marry@10 Matrimony Services</span>
@@ -137,6 +137,28 @@ const PrivacyPolicy = () => {
                 </ul>
               </div>
             </div>
+
+            {/* NEW: Verification Documents (Optional) */}
+            <div className="mt-8 bg-gradient-to-r from-cyan-50 to-sky-50 p-6 rounded-xl border border-cyan-200">
+              <h3 className="text-xl font-semibold text-cyan-800 mb-3 flex items-center">
+                <FileCheck className="w-5 h-5 mr-2" />
+                Verification Documents (Optional)
+              </h3>
+              <p className="text-gray-700 mb-3">
+                To help build trust among members, you may voluntarily choose to verify your identity 
+                by uploading images of your:
+              </p>
+              <div className="flex flex-wrap gap-3 mb-4">
+                <span className="px-3 py-1 bg-white rounded-full text-sm text-gray-700 shadow-sm">PAN Card</span>
+                <span className="px-3 py-1 bg-white rounded-full text-sm text-gray-700 shadow-sm">Voter ID</span>
+                <span className="px-3 py-1 bg-white rounded-full text-sm text-gray-700 shadow-sm">Driving License</span>
+              </div>
+              <p className="text-gray-700 text-sm">
+                These documents are collected only if you opt to undergo verification. They are used solely to 
+                confirm your identity and award a “Verified” badge on your profile. You may skip verification 
+                and still use the platform.
+              </p>
+            </div>
           </section>
 
           {/* How We Use Information */}
@@ -176,6 +198,12 @@ const PrivacyPolicy = () => {
                   title: "Legal Compliance",
                   desc: "Meet regulatory and legal requirements",
                   color: "bg-indigo-100 text-indigo-800"
+                },
+                // NEW: Identity Verification (explicit)
+                {
+                  title: "Identity Verification",
+                  desc: "If you choose to upload government‑issued identification documents, we use them to verify your identity and display a verification status to other members.",
+                  color: "bg-cyan-100 text-cyan-800"
                 }
               ].map((item, index) => (
                 <div key={index} className="p-5 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
@@ -217,6 +245,15 @@ const PrivacyPolicy = () => {
                       <span className="text-sm text-gray-700">{service}</span>
                     </div>
                   ))}
+                </div>
+                {/* NEW: Document Verification Partners */}
+                <div className="mt-4 pt-3 border-t border-blue-200">
+                  <p className="text-gray-700 text-sm">
+                    <strong>Document Verification Partners:</strong> We may share uploaded identity documents 
+                    with third‑party service providers that specialize in document verification (e.g., OCR and 
+                    fraud detection). These providers are bound by confidentiality and security obligations and 
+                    are not permitted to use your data for any other purpose.
+                  </p>
                 </div>
               </div>
 
@@ -309,6 +346,24 @@ const PrivacyPolicy = () => {
               </div>
             </div>
 
+            {/* NEW: Consent for Verification Documents */}
+            <div className="mt-8 p-5 bg-cyan-50 rounded-xl border border-cyan-200">
+              <h3 className="font-semibold text-cyan-800 mb-3 flex items-center">
+                <Fingerprint className="w-5 h-5 mr-2" />
+                Consent for Verification Documents
+              </h3>
+              <p className="text-gray-700 text-sm mb-3">
+                Before you upload any government‑issued ID, we will ask for your explicit consent. 
+                You may withdraw your consent at any time by deleting the uploaded documents or closing your account. 
+                Withdrawal of consent will remove the “Verified” badge but does not affect your ability to use other features.
+              </p>
+              <p className="text-gray-700 text-sm">
+                You can delete your uploaded identity documents at any time through your account settings. 
+                If you close your account, all such documents will be permanently deleted within a reasonable timeframe, 
+                unless we are required to retain them by law.
+              </p>
+            </div>
+
             {/* Additional Rights */}
             <div className="mt-8 p-5 bg-gray-50 rounded-xl">
               <h4 className="font-semibold text-gray-800 mb-3">Additional Rights:</h4>
@@ -347,6 +402,10 @@ const PrivacyPolicy = () => {
                   We take reasonable technical and organizational measures to protect your 
                   information from unauthorized access, disclosure, alteration, or destruction.
                 </p>
+                <p className="text-gray-700 mb-4">
+                  Uploaded identity documents are encrypted at rest and accessible only to authorised personnel 
+                  on a need‑to‑know basis.
+                </p>
                 
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
                   {[
@@ -378,62 +437,69 @@ const PrivacyPolicy = () => {
             </p>
           </section>
 
+          {/* Additional App-Specific Information */}
+          <section className="mb-10">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+              Additional App-Specific Information
+            </h2>
+            
+            <div className="space-y-6">
+              {/* Children's Privacy */}
+              <div className="bg-red-50 p-5 rounded-xl border border-red-200">
+                <h3 className="font-semibold text-red-800 mb-2">Children's Privacy</h3>
+                <p className="text-gray-700">
+                  Our services are intended for users who are at least 18 years old (or the age of majority in your jurisdiction). 
+                  We do not knowingly collect personal information from children under 18. If you believe we have collected 
+                  information from a child, please contact us immediately.
+                </p>
+              </div>
 
-          {/* Additional App Store Required Sections */}
-<section className="mb-10">
-  <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-    Additional App-Specific Information
-  </h2>
-  
-  <div className="space-y-6">
-    {/* Children's Privacy */}
-    <div className="bg-red-50 p-5 rounded-xl border border-red-200">
-      <h3 className="font-semibold text-red-800 mb-2">Children's Privacy</h3>
-      <p className="text-gray-700">
-        Our services are intended for users who are at least 18 years old (or the age of majority in your jurisdiction). 
-        We do not knowingly collect personal information from children under 18. If you believe we have collected 
-        information from a child, please contact us immediately.
-      </p>
-    </div>
+              {/* Data Retention - Updated */}
+              <div className="bg-blue-50 p-5 rounded-xl border border-blue-200">
+                <h3 className="font-semibold text-blue-800 mb-2">Data Retention</h3>
+                <p className="text-gray-700">
+                  We retain your personal information for as long as your account is active or as needed to provide services. 
+                  After account deletion, we may retain certain information as required by law or for legitimate business purposes.
+                </p>
+                <div className="mt-3 grid sm:grid-cols-2 gap-3">
+                  <div className="bg-white p-3 rounded">
+                    <span className="font-medium text-gray-800">Active Accounts:</span>
+                    <span className="text-gray-600 ml-2">Until deletion request</span>
+                  </div>
+                  <div className="bg-white p-3 rounded">
+                    <span className="font-medium text-gray-800">Inactive Accounts:</span>
+                    <span className="text-gray-600 ml-2">2 years of inactivity</span>
+                  </div>
+                </div>
+                <div className="mt-3 pt-3 border-t border-blue-200">
+                  <p className="text-gray-700 text-sm">
+                    <strong>Verification Documents:</strong> If you upload identity documents (PAN, Voter ID, Driving License) 
+                    for verification, these documents will be deleted when you delete your account or withdraw your consent. 
+                    In no event will we retain copies of such documents beyond the period necessary for verification, 
+                    unless required by applicable law.
+                  </p>
+                </div>
+              </div>
 
-    {/* Data Retention */}
-    <div className="bg-blue-50 p-5 rounded-xl border border-blue-200">
-      <h3 className="font-semibold text-blue-800 mb-2">Data Retention</h3>
-      <p className="text-gray-700">
-        We retain your personal information for as long as your account is active or as needed to provide services. 
-        After account deletion, we may retain certain information as required by law or for legitimate business purposes.
-      </p>
-      <div className="mt-3 grid sm:grid-cols-2 gap-3">
-        <div className="bg-white p-3 rounded">
-          <span className="font-medium text-gray-800">Active Accounts:</span>
-          <span className="text-gray-600 ml-2">Until deletion request</span>
-        </div>
-        <div className="bg-white p-3 rounded">
-          <span className="font-medium text-gray-800">Inactive Accounts:</span>
-          <span className="text-gray-600 ml-2">2 years of inactivity</span>
-        </div>
-      </div>
-    </div>
+              {/* International Data Transfers */}
+              <div className="bg-green-50 p-5 rounded-xl border border-green-200">
+                <h3 className="font-semibold text-green-800 mb-2">International Data Transfers</h3>
+                <p className="text-gray-700">
+                  Your information may be transferred to and processed in countries other than your own. 
+                  We ensure appropriate safeguards are in place for such transfers.
+                </p>
+              </div>
 
-    {/* International Data Transfers */}
-    <div className="bg-green-50 p-5 rounded-xl border border-green-200">
-      <h3 className="font-semibold text-green-800 mb-2">International Data Transfers</h3>
-      <p className="text-gray-700">
-        Your information may be transferred to and processed in countries other than your own. 
-        We ensure appropriate safeguards are in place for such transfers.
-      </p>
-    </div>
-
-    {/* Third-Party Services */}
-    <div className="bg-purple-50 p-5 rounded-xl border border-purple-200">
-      <h3 className="font-semibold text-purple-800 mb-2">Third-Party Services & Links</h3>
-      <p className="text-gray-700">
-        Our app may contain links to third-party websites or services. This Privacy Policy does not apply to those 
-        third-party services. We encourage you to review their privacy policies.
-      </p>
-    </div>
-  </div>
-</section>
+              {/* Third-Party Services */}
+              <div className="bg-purple-50 p-5 rounded-xl border border-purple-200">
+                <h3 className="font-semibold text-purple-800 mb-2">Third-Party Services & Links</h3>
+                <p className="text-gray-700">
+                  Our app may contain links to third-party websites or services. This Privacy Policy does not apply to those 
+                  third-party services. We encourage you to review their privacy policies.
+                </p>
+              </div>
+            </div>
+          </section>
 
           {/* Contact Information */}
           <section className="pt-8 border-t border-gray-200">
@@ -479,7 +545,7 @@ const PrivacyPolicy = () => {
               understood, and accept this Privacy Policy.
             </p>
             <p className="text-sm text-gray-300 mt-2">
-              Last updated: February 15, 2025
+              Last updated: March 15, 2026
             </p>
           </div>
         </div>
