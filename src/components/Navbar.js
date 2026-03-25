@@ -15,6 +15,7 @@ export default function Navbar() {
 
   const navigationItems = [
     { href: '/', label: 'Home' },
+    { href: '/subscription', label: 'Subscription' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
     // { href: '/admin', label: 'Admin', isSpecial: true }

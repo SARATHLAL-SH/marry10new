@@ -67,8 +67,10 @@ function Footer() {
               <li><a href="/" className="text-gray-300 hover:text-primary transition-colors">Home</a></li>
               <li><a href="/about" className="text-gray-300 hover:text-primary transition-colors">About</a></li>
               <li><a href="/contact" className="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
-              <li><a href="/admin" className="text-gray-300 hover:text-primary transition-colors">Admin</a></li>
               <li><a href="/privacy-policy" className="text-gray-300 hover:text-primary transition-colors">Privacy & Policy</a></li>
+              <li><a href="/terms" className="text-gray-300 hover:text-primary transition-colors">Terms & Conditions</a></li>
+              <li><a href="/refund-policy" className="text-gray-300 hover:text-primary transition-colors">Refund Policy</a></li>
+             
             </ul>
           </div>
           
@@ -76,9 +78,9 @@ function Footer() {
           <div>
             <h4 className="text-lg font-semibold text-secondary mb-4">Contact Us</h4>
             <ul className="space-y-2 text-gray-300">
-              <li>Email: info@matrimony.com</li>
+              <li>Email: www.marry10care@gmail.com</li>
               <li>Phone: +91 8891332500</li>
-              <li>Address:  Darbhanga, Bihar</li>
+              <li>Address:  Trivandrum, Kerala</li>
             </ul>
           </div>
         </div>

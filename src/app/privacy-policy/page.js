@@ -18,10 +18,10 @@ const PrivacyPolicy = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-600">
             <div className="flex items-center">
               <Calendar className="w-4 h-4 mr-2" />
-              <span className="text-sm sm:text-base">Last Updated: 15-03-2026</span>
+              <span className="text-sm sm:text-base">Last Updated: 25-03-2026</span>
             </div>
             <span className="hidden sm:block">•</span>
-            <span className="text-sm sm:text-base">Marry@10 Matrimony Services</span>
+            <span className="text-sm sm:text-base">Launchly Software Private Limited</span>
           </div>
         </div>
 
@@ -37,10 +37,7 @@ const PrivacyPolicy = () => {
                   Our Commitment to Your Privacy
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
-                  At <strong>Marry@10</strong>, we are committed to protecting the privacy and 
-                  security of our users. This Privacy Policy explains how we collect, use, 
-                  disclose, and manage your personal information when you use our mobile 
-                  application Marry@10 (the "App") and our website (the "Website").
+                  At <strong>Launchly Software Private Limited</strong> (hereinafter referred to as "Company", "we", "us", or "our"), operating under the brand <strong>Marry@10</strong>, we are committed to protecting the privacy and security of our users. This Privacy Policy explains how we collect, use, disclose, and manage your personal information when you use our mobile application Marry@10 (the "App") and our website (the "Website").
                 </p>
               </div>
             </div>
@@ -138,7 +135,7 @@ const PrivacyPolicy = () => {
               </div>
             </div>
 
-            {/* NEW: Verification Documents (Optional) */}
+            {/* Verification Documents (Optional) */}
             <div className="mt-8 bg-gradient-to-r from-cyan-50 to-sky-50 p-6 rounded-xl border border-cyan-200">
               <h3 className="text-xl font-semibold text-cyan-800 mb-3 flex items-center">
                 <FileCheck className="w-5 h-5 mr-2" />
@@ -199,7 +196,6 @@ const PrivacyPolicy = () => {
                   desc: "Meet regulatory and legal requirements",
                   color: "bg-indigo-100 text-indigo-800"
                 },
-                // NEW: Identity Verification (explicit)
                 {
                   title: "Identity Verification",
                   desc: "If you choose to upload government‑issued identification documents, we use them to verify your identity and display a verification status to other members.",
@@ -246,7 +242,6 @@ const PrivacyPolicy = () => {
                     </div>
                   ))}
                 </div>
-                {/* NEW: Document Verification Partners */}
                 <div className="mt-4 pt-3 border-t border-blue-200">
                   <p className="text-gray-700 text-sm">
                     <strong>Document Verification Partners:</strong> We may share uploaded identity documents 
@@ -346,7 +341,7 @@ const PrivacyPolicy = () => {
               </div>
             </div>
 
-            {/* NEW: Consent for Verification Documents */}
+            {/* Consent for Verification Documents */}
             <div className="mt-8 p-5 bg-cyan-50 rounded-xl border border-cyan-200">
               <h3 className="font-semibold text-cyan-800 mb-3 flex items-center">
                 <Fingerprint className="w-5 h-5 mr-2" />
@@ -454,7 +449,7 @@ const PrivacyPolicy = () => {
                 </p>
               </div>
 
-              {/* Data Retention - Updated */}
+              {/* Data Retention */}
               <div className="bg-blue-50 p-5 rounded-xl border border-blue-200">
                 <h3 className="font-semibold text-blue-800 mb-2">Data Retention</h3>
                 <p className="text-gray-700">
@@ -510,7 +505,7 @@ const PrivacyPolicy = () => {
                 </h2>
                 <p className="text-gray-700 mb-4">
                   If you have any questions or concerns about this Privacy Policy, 
-                  please contact our Privacy Team:
+                  please contact our Privacy Team at:
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center">
@@ -522,9 +517,17 @@ const PrivacyPolicy = () => {
                       marry10care@gmail.com
                     </a>
                   </div>
-                  <div className="flex items-center">
-                    <Phone className="w-5 h-5 text-gray-500 mr-3" />
+                  <div className="flex items-start">
+                    <Phone className="w-5 h-5 text-gray-500 mr-3 mt-0.5" />
                     <span className="text-gray-700">Contact number available in app</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="w-5 h-5 mr-3 flex-shrink-0"></div>
+                    <div className="text-gray-700 text-sm">
+                      <strong>Registered Office:</strong><br />
+                      Launchly Software Private Limited<br />
+                      Trivandrum, Kerala
+                    </div>
                   </div>
                 </div>
               </div>
@@ -545,7 +548,10 @@ const PrivacyPolicy = () => {
               understood, and accept this Privacy Policy.
             </p>
             <p className="text-sm text-gray-300 mt-2">
-              Last updated: March 15, 2026
+              Last updated: March 25, 2026
+            </p>
+            <p className="text-xs text-gray-400 mt-3">
+              © {new Date().getFullYear()} Launchly Software Private Limited. All rights reserved.
             </p>
           </div>
         </div>
