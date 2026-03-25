@@ -65,7 +65,7 @@ export default function Navbar() {
   return (
     <nav className="bg-gradient-to-r from-white to-primary shadow-2xl border-b-4 border-yellow-600 sticky top-0 z-50 backdrop-blur-sm ">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center py-3">
+        <div className="flex justify-between items-center pt-2">
           {/* Enhanced Logo/Brand */}
           <div 
             className="flex items-center space-x-3 group cursor-pointer"
@@ -74,79 +74,29 @@ export default function Navbar() {
           >
             {/* Enhanced Logo Container with multiple glow layers */}
             <div className="relative">
-              {/* Outer glow rings */}
-              <div className={`absolute -inset-4 bg-gradient-to-r from-yellow-400/30 via-pink-500/20 to-yellow-400/30 rounded-full blur-xl transition-all duration-1000 ${
-                isHoveringLogo ? 'opacity-100 scale-110' : 'opacity-50 scale-100'
-              }`}></div>
+            
               
-              {/* Middle glow ring */}
-              <div className={`absolute -inset-2 bg-gradient-to-r from-yellow-300/40 via-pink-400/20 to-yellow-300/40 rounded-full blur-lg transition-all duration-700 ${
-                isHoveringLogo ? 'opacity-80 scale-105 animate-pulse' : 'opacity-40'
-              }`}></div>
-              
-              {/* Inner glow ring */}
-              <div className={`absolute -inset-1 bg-gradient-to-r from-yellow-200/60 via-pink-300/30 to-yellow-200/60 rounded-full blur-md transition-all duration-500 ${
-                isHoveringLogo ? 'opacity-100 animate-spin-slow' : 'opacity-30'
-              }`}></div>
-              
-              {/* Rotating particles around logo */}
-              {isHoveringLogo && (
-                <>
-                  {[...Array(8)].map((_, i) => (
-                    <div 
-                      key={i}
-                      className="absolute w-1 h-1 bg-yellow-300 rounded-full"
-                      style={{
-                        transform: `rotate(${i * 45}deg) translateX(50px)`,
-                        animation: `orbit 2s linear infinite`,
-                        animationDelay: `${i * 0.25}s`,
-                      }}
-                    ></div>
-                  ))}
-                </>
-              )}
-
+            
+ 
               {/* Logo image with enhanced effects */}
-              <div className="relative w-18 h-18 rounded-full flex items-center justify-center overflow-hidden border-3 border-yellow-500 shadow-2xl group-hover:scale-110 transition-all duration-500 z-10 backdrop-blur-sm bg-white/10">
+              <div className="relative  flex items-center justify-center overflow-hidden  group-hover:scale-110 transition-all duration-500 z-10 ">
                 {/* Shine effect overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 transition-opacity duration-700 ${
-                  isHoveringLogo ? 'opacity-100 animate-shine' : ''
-                }`}></div>
+               
                 
-                {/* Pulsing ring */}
-                <div className={`absolute -inset-1 border-2 border-yellow-400/50 rounded-full transition-all duration-700 ${
-                  isHoveringLogo ? 'animate-ping opacity-20' : 'opacity-0'
-                }`}></div>
+               
+                
                 
                 <img 
-                  src="/images/m10_logo.jpeg" 
+                  src="/images/m10_nbg.gif" 
                   alt="Matrimony Logo" 
-                  className="w-12 h-12 object-cover relative z-10"
+                  className="w-20 h-20 object-cover relative z-10"
                 />
                 
-                {/* Glowing overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-pink-500/10 to-yellow-400/20 rounded-full transition-all duration-500 ${
-                  isHoveringLogo ? 'opacity-100' : 'opacity-0'
-                }`}></div>
+               
+                
               </div>
               
-              {/* Floating particles */}
-              {isHoveringLogo && (
-                <>
-                  {[...Array(4)].map((_, i) => (
-                    <div 
-                      key={`particle-${i}`}
-                      className="absolute w-2 h-2 bg-gradient-to-r from-yellow-300 to-pink-300 rounded-full opacity-70"
-                      style={{
-                        left: `${Math.random() * 60 + 20}%`,
-                        top: `${Math.random() * 60 + 20}%`,
-                        animation: `float 3s ease-in-out infinite`,
-                        animationDelay: `${i * 0.5}s`,
-                      }}
-                    ></div>
-                  ))}
-                </>
-              )}
+              
             </div>
             
             {/* Enhanced Text with glow effects */}
