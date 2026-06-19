@@ -93,32 +93,51 @@ export default function HomeClient() {
         </div>
       </section>
 
-    {/* ✨ NEW: QR Code Section */}
-      <section className="py-16 bg-gradient-to-r from-pink-100 via-purple-100 to-pink-100">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-pink-800 mb-4 font-serif">
-            Download Our App
-          </h2>
-          <p className="text-gray-700 mb-8 font-sans text-lg">
-            Scan the QR code below to get the app and start your journey to find love!
-          </p>
-          <div className="flex justify-center">
-            <div className="bg-white p-4 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 hover:rotate-1 border-4 border-pink-200 inline-block">
-              <Image
-                src="/images/M10QR.PNG"
-                alt="QR Code to download the app"
-                width={220}
-                height={220}
-                className="rounded-lg"
-                priority
-              />
-            </div>
-          </div>
-          <p className="mt-6 text-sm text-gray-500 font-sans">
-            Available on  Android • Scan with your camera •  IOS app coming soon..
-          </p>
-        </div>
-      </section>
+   {/* ✨ QR Code Section with App Link */}
+<section className="py-16 bg-gradient-to-r from-pink-100 via-purple-100 to-pink-100">
+  <div className="max-w-4xl mx-auto px-4 text-center">
+    <h2 className="text-3xl font-bold text-pink-800 mb-4 font-serif">
+      Download Our App
+    </h2>
+    <p className="text-gray-700 mb-8 font-sans text-lg">
+      Scan the QR code below or click the link to get the app and start your journey to find love!
+    </p>
+    
+    <div className="flex justify-center">
+      <div className="bg-white p-4 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 hover:rotate-1 border-4 border-pink-200 inline-block">
+        <Image
+          src="/images/M10QR.png"
+          alt="QR Code to download the Marryat10 app"
+          width={220}
+          height={220}
+          className="rounded-lg"
+          priority
+        />
+      </div>
+    </div>
+
+    {/* 👇 App Link Below QR Code */}
+    <div className="mt-6">
+      <a
+        href="https://play.google.com/store/apps/details?id=com.matrimoniindia.marryat10"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg"
+      >
+       <img
+  src="/images/logo.png"
+  alt="Marryat10 Logo"
+  className="w-7 h-7 object-contain"
+/>
+        <span>Download from  PlayStore</span>
+      </a>
+    </div>
+
+    <p className="mt-4 text-sm text-gray-500 font-sans">
+      Available on Android • Scan QR or click the button above
+    </p>
+  </div>
+</section>
 
       {/* Notes Section - Modern Style */}
       {notes.length > 0 && (
