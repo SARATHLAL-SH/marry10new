@@ -106,7 +106,7 @@ export default function HomeClient() {
     <div className="flex justify-center">
       <div className="bg-white p-4 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 hover:rotate-1 border-4 border-pink-200 inline-block">
         <Image
-          src="/images/M10QR.png"
+          src="/images/M10QR.PNG"
           alt="QR Code to download the Marryat10 app"
           width={220}
           height={220}
