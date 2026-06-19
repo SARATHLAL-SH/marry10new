@@ -7,6 +7,7 @@ import VideoSection from '@/components/VideoSection';
 import RegistrationModal from '@/components/RegistrationModal';
 import SpecialtiesFloating from '@/components/SpecialtiesFloating';
 import SpecialtiesMobile from '@/components/SpecialtiesMobile';
+import Image from 'next/image'; // <-- imported for QR code
 
 export default function HomeClient() {
   const [showRegistration, setShowRegistration] = useState(false);
@@ -89,6 +90,33 @@ export default function HomeClient() {
           >
             Register Now
           </button>
+        </div>
+      </section>
+
+    {/* ✨ NEW: QR Code Section */}
+      <section className="py-16 bg-gradient-to-r from-pink-100 via-purple-100 to-pink-100">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-pink-800 mb-4 font-serif">
+            Download Our App
+          </h2>
+          <p className="text-gray-700 mb-8 font-sans text-lg">
+            Scan the QR code below to get the app and start your journey to find love!
+          </p>
+          <div className="flex justify-center">
+            <div className="bg-white p-4 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 hover:rotate-1 border-4 border-pink-200 inline-block">
+              <Image
+                src="/images/M10QR.PNG"
+                alt="QR Code to download the app"
+                width={220}
+                height={220}
+                className="rounded-lg"
+                priority
+              />
+            </div>
+          </div>
+          <p className="mt-6 text-sm text-gray-500 font-sans">
+            Available on  Android • Scan with your camera •  IOS app coming soon..
+          </p>
         </div>
       </section>
 
@@ -227,6 +255,8 @@ export default function HomeClient() {
           <VideoSection />
         </div>
       </section>
+
+      
 
       {/* Final CTA Section */}
       <section className="py-16 bg-gradient-to-r from-primary/30 through-primary to-primary/80">
