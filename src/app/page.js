@@ -11,8 +11,19 @@ export const metadata = {
     "marriage matchmaking",
     "find life partner",
   ],
-  authors: [{ name: "Marry10" }],
+  authors: [{ name: "Marryat10" }],
   robots: "index, follow",
+
+   icons: {
+  icon: [
+    { url: "/images/logo16.png", sizes: "16x16", type: "image/png" },
+    { url: "/images/logo32.png", sizes: "32x32", type: "image/png" },
+    { url: "/images/logo32.png", sizes: "192x192", type: "image/png" },
+  ],
+  apple: [
+    { url: "/images/logo32.png", sizes: "180x180", type: "image/png" },
+  ],
+},
 
   openGraph: {
     title: "Matrimonial Sites in India | Marry10",
