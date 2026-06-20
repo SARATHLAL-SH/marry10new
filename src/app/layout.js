@@ -1,4 +1,5 @@
 import './globals.css';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Cormorant_Garamond, Sacramento, Inter } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
       <body className={cormorant.className}>
         <Navbar />
         {children}
+         <GoogleAnalytics gaId="G-9NDJS0V9C9" />
         <Footer />
       </body>
     </html>
