@@ -74,7 +74,7 @@ export default function RootLayout({ children }) { // ✅ No type annotation her
       <body className={inter.className}>
         <Navbar />
         {children}
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || 'G-9NDJS0V9C9'} />
+        <GoogleAnalytics gaId="G-9NDJS0V9C9" />
         <Footer />
       </body>
     </html>
