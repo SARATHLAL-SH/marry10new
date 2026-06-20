@@ -1,19 +1,19 @@
 export default function sitemap() {
   return [
     {
-      url: "http://localhost:3000/",
+      url: "https://www.marryat10.com/", // ✅ Removed :3000
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1,
     },
     {
-      url: "http://localhost:3000/about",
+      url: "https://www.marryat10.com/about",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "http://localhost:3000/contact",
+      url: "https://www.marryat10.com/contact",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
